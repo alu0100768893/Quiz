@@ -3,10 +3,10 @@
 <form action="/quizes/answer" method="get">
 	<% if(typeof(pregunta) != "string"){
 		   for(var i=0; i < pregunta.length; i++){ %>
-					<%= i %>: <a href="question/<%= i %>"><%= pregunta[i] %></a><p>
+					<%= i %>: <a href="question/<%= i %>"><%- pregunta[i] %></a><p>
 	  <% }
 	}else{ %>
-		Pregunta: <%= pregunta %> <p>
+		Pregunta: <%- pregunta %> <p>
 		<input type="text" name="respuesta" placeholder="Responda aquí">
 		<input type="submit" value="Enviar">
  <% } %>
