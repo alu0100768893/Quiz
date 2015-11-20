@@ -17,7 +17,7 @@
 ####Link a la aplicación en iaas:
 >#####[_Link a la aplicación_](http://10.6.128.77:8080/)
 
-####Prácicas para la asignaura Sistemas y Tecnologías Web:
+####Prácticas para la asignaura Sistemas y Tecnologías Web:
 >#####[_Link a la asignatura_](http://eguia.ull.es/etsii/query.php?codigo=139264512)
 
 ####Autor:

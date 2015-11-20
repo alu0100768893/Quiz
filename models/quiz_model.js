@@ -60,8 +60,8 @@ function Quiz() {
         respuesta: new Respuesta('HRL')
     },
     {   
-        pregunta: new PreguntaLarga('¿Capital de Roma?'),
-        respuesta: new Respuesta('HRL')
+        pregunta: new PreguntaLarga('¿Capital de Italia?'),
+        respuesta: new Respuesta('Roma')
     },
     {   
         pregunta: new PreguntaLarga('¿Quién reinaba en España cuando se descubrió América?'),
@@ -69,7 +69,7 @@ function Quiz() {
     },
     ////////////////////////////////////////////////////////////////////////////////////
     //Tengo problemas con las preguntas de las multiplicaciones
-    //Al introducirlas asi aunque la responda bien me da Incorrecto
+    //Al introducirlas asi, aunque la responda bien me da Incorrecto
     {
       pregunta: new PreguntaCorta('¿ 4x4 =?'),
       respuesta: new Respuesta(16)
