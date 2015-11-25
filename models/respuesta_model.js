@@ -10,18 +10,6 @@ function Respuesta(solucion){
 		else if(typeof(this.solucion) == "function"){
 			return function(x){this.solucion(solucion);};
 		}
-	/*this.corregir = function(respuestaAlumno){
-		if(typeof(solucion) == "string" || typeof(solucion) == "number"){
-			return solucion === respuestaAlumno;
-		}
-		else if(solucion.constructor.name == "RegExp"){
-			if(solucion.exec(respuestaAlumno)){ return true; }
-			else{ return false; }
-		}
-		else if(typeof(solucion) == "function"){
-			return solucion(respuestaAlumno);
-		}
-	};*/
 }
 
 module.exports = Respuesta;

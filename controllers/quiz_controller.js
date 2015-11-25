@@ -28,15 +28,6 @@ exports.answer = function(req, res) {
 
 exports.verTodas = function(req,res){
   var aux = [];
-  /*for(var i = 0; i < (quiz.npreguntas()-5); i++){
-    aux[i] = quiz.getCuestionario(i).pregunta.getEnunciado();
-  }
-  aux[7] = quiz.getCuestionario(7).pregunta.getEnunciado();
-  aux[8] = quiz.getCuestionario(8).pregunta.getEnunciado();
-  aux[9] = quiz.getCuestionario(9).pregunta.getEnunciado();
-  aux[10] = quiz.getCuestionario(10).pregunta.getEnunciado();
-  aux[11] = quiz.getCuestionario(11).pregunta.getEnunciado();*/
-  //console.log('numero de preguntas: ' + quiz.npreguntas());
   for(var i = 0; i < (quiz.npreguntas()); i++){
     aux[i] = quiz.getCuestionario(i).pregunta.getEnunciado();
   }

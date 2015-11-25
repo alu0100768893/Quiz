@@ -22,7 +22,6 @@ AbstractQuiz.prototype.getCuestionario = function(x){
 AbstractQuiz.prototype.gettodas = function(){
     var aux = [];
     for (var i = 0; i < this.q.length; i++){aux[i] = this.getCuestionario(i).pregunta; }
-    //for (var i = 0; i < this.q.length; i++){aux[i] = this.getCuestionario(i).pregunta.getEnunciado(); }
     return aux;
 }
 
