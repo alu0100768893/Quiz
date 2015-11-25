@@ -1,7 +1,7 @@
 function Pregunta(p){
-	var cuestion = p;
-    this.getPregunta = function(){
-		return cuestion;
+	var enunciado = p;
+    this.getEnunciado = function(){
+		return enunciado;
 	};
 }
 

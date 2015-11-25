@@ -15,14 +15,14 @@ AbstractQuiz.prototype.npreguntas = function() {
   return this.q.length;
 }
 
-AbstractQuiz.prototype.getpreg = function(x){
+AbstractQuiz.prototype.getCuestionario = function(x){
   return this.q[x];
 }
 
 AbstractQuiz.prototype.gettodas = function(){
     var aux = [];
-    for (var i = 0; i < this.q.length; i++){aux[i] = this.getpreg(i).pregunta; }
-    //for (var i = 0; i < this.q.length; i++){aux[i] = this.getpreg(i).pregunta.getPregunta(); }
+    for (var i = 0; i < this.q.length; i++){aux[i] = this.getCuestionario(i).pregunta; }
+    //for (var i = 0; i < this.q.length; i++){aux[i] = this.getCuestionario(i).pregunta.getEnunciado(); }
     return aux;
 }
 
