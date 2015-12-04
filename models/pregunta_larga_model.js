@@ -1,14 +1,11 @@
 var Pregunta = require('./pregunta_model.js');
 
-function PreguntaLarga(pc){
-    Pregunta.call(this, pc);
-    this.tipo = 'larga';
+function PreguntaLarga(pl){
+    Pregunta.call(this, pl);
+    this.vista = '<textarea cols="40" rows="10" name="respuesta" placeholder="Responda aquí"></textarea><br>';
 }
 
 PreguntaLarga.prototype = new Pregunta();
 PreguntaLarga.prototype.constructor = PreguntaLarga;
-PreguntaLarga.prototype.getTipo = function(){
-    return this.tipo;
-};
 
 module.exports = PreguntaLarga;

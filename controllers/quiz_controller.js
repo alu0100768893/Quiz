@@ -12,16 +12,11 @@ exports.index = function(req, res, next) {
 
 exports.question = function(req,res) {
   current = quiz.randomQuestion();
-  if(current.pregunta.getTipo() == 'larga')
-  res.render('quizes/pregunta_larga', {pregunta: current.pregunta.getEnunciado()});
-  else
-  res.render('quizes/pregunta_corta', {pregunta: current.pregunta.getEnunciado()});
+  res.render('quizes/question', {pregunta: current.pregunta});
 };
 
 exports.answer = function(req, res) {
   var c = 'Incorrecto';
-  //debug(req.query);
-  //debug("current.respuesta(req.query.respuesta) = "+current.respuesta(req.query.respuesta));
   if (current.respuesta(req.query.respuesta)) { c = 'Correcto'; }
   res.render('quizes/answer', {respuesta: c});
 };
@@ -31,15 +26,11 @@ exports.verTodas = function(req,res){
   for(var i = 0; i < (quiz.npreguntas()); i++){
     aux[i] = quiz.getCuestionario(i).pregunta.getEnunciado();
   }
-  res.render('quizes/question', {pregunta: aux});
+  res.render('quizes/todas', {pregunta: aux});
 };
 
 exports.mostrarPorId = function(req,res){
   var id = req.params.id;
-  var preg = quiz.getCuestionario(id).pregunta.getEnunciado();
   current = quiz.getCuestionario(id);
-  if(current.pregunta.getTipo() == 'larga')
-  res.render('quizes/pregunta_larga', {pregunta: current.pregunta.getEnunciado()});
-  else
-  res.render('quizes/pregunta_corta', {pregunta: current.pregunta.getEnunciado()});
+  res.render('quizes/question', {pregunta: current.pregunta});
 };

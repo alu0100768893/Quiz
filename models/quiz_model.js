@@ -1,13 +1,27 @@
 var AbstractQuiz = require('./abstract_quiz_model.js');
-var debug = require('debug');
-var Pregunta = require('./pregunta_model.js');
+//var debug = require('debug');
+//var Pregunta = require('./pregunta_model.js');
 var Respuesta = require('./respuesta_model.js');
 var PreguntaCorta = require('./pregunta_corta_model.js');
 var PreguntaLarga = require('./pregunta_larga_model.js');
+var seleccionMultiple = require('./seleccion_multiple_model.js');
+var seleccionSimple = require('./seleccion_simple_model.js');
 
 function Quiz() {
   AbstractQuiz.call(this);
   this.q.push(
+    {
+        pregunta: new seleccionMultiple('¿Cuáles de estos números son pares?', ['1','2','3','4']),
+        respuesta: new Respuesta(['2','4'])
+    },
+    {
+      pregunta: new seleccionMultiple('¿Cuáles de estos nombres son femeninos?',["Ana","Pedro","Emmeline"]),
+      respuesta: new Respuesta(["Ana","Emmeline"])
+    },
+    {
+        pregunta: new seleccionSimple('¿Cuáles de estos números es impar?', ['1','2','4']),
+        respuesta: new Respuesta('1')
+    },
     {
         pregunta: new PreguntaCorta('¿Quién es el capitán del Club Deportivo Tenerife?'),
         respuesta: new Respuesta(/^\s*suso\s*$/i)

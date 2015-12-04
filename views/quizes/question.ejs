@@ -1,15 +1,7 @@
 <br>
 </br>
 <form action="/quizes/answer" method="get">
-	<% if(typeof(pregunta) != "string"){
-		   for(var i=0; i < pregunta.length; i++){ %>
-					<%= i %>: <a href="question/<%= i %>"><%- pregunta[i] %></a><p>
-	  <% }
-	}else{ %>
-		Pregunta: <%- pregunta %> <p>
-		<textarea rows="4" cols="50" name="respuesta" placeholder="Responda aquí"></textarea>
-		<br>
-		</br>
-		<input type="submit" value="Enviar">
- <% } %>
+    <p>Pregunta: <%= pregunta.getEnunciado(); %> </p>
+	<%- pregunta.vista; %>
+	<input type="submit" value="Enviar">
 </form>
