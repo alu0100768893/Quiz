@@ -9,6 +9,9 @@
 >####Definir una clase respuesta que reciba una función, una expresión regular, un string o un número.
 >####Definir una clase pregunta, de la que heredan PreguntaCorta y Pregunta Larga.
 >####PreguntaCorta se representa con un input, PreguntaLarga con una textarea.
+>####Definir preguntas de selección múltiple y preguntas de selección simple.
+>####Las preguntas de selección simple se representan con elementos radio.
+>####Las preguntas de selección múltiple se representan con elementos checkbox.
 >####Desplegada en [_Heroku_](https://www.heroku.com/)
 
 
